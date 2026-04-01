@@ -3,7 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Natnael Bishaw | Cyber Security Portfolio</title>
+
+<!-- 🔒 SECURITY HEADERS -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data:;
+  style-src 'self' 'unsafe-inline';
+  script-src 'self' 'unsafe-inline';
+  object-src 'none';
+  base-uri 'self';
+  frame-ancestors 'none';
+  form-action 'self';
+">
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="no-referrer">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
 <style>
 body {
@@ -98,7 +116,6 @@ img {
   transform: translateY(0);
 }
 </style>
-
 </head>
 
 <body>
@@ -123,8 +140,7 @@ img {
     </div>
 
     <div class="hero-image">
-      <!-- ADD YOUR IMAGE FILE HERE -->
-      <img src="profile.jpg" alt="Natnael Bishaw">
+      <img src="profile.jpg" alt="Natnael Bishaw profile photo" loading="lazy">
     </div>
 
   </div>
@@ -149,31 +165,29 @@ img {
 
   <div class="card">
     <h3>Final Year Project – Malicious Browser Extension Detection</h3>
-    <p>
-      Built a cross-layer detection system correlating browser activity with host-level events.
-    </p>
+    <p>Cross-layer detection system correlating browser activity with host-level events.</p>
     <ul>
-      <li>Python-based detection engine</li>
-      <li>Simulated malicious extension (data exfiltration)</li>
-      <li>Real-time monitoring and risk scoring</li>
-      <li>Attribution of malicious activity to extension IDs</li>
+      <li>Python detection engine</li>
+      <li>Simulated malicious extension</li>
+      <li>Real-time monitoring & risk scoring</li>
+      <li>Threat attribution to extension ID</li>
     </ul>
   </div>
 
   <div class="card">
     <h3>Digital Forensics Investigation – Operation Redbridge</h3>
     <ul>
-      <li>Recovered deleted files and analysed NTFS systems</li>
-      <li>Decrypted hidden volumes (VeraCrypt)</li>
-      <li>Identified incriminating images, audio, and web activity</li>
-      <li>Maintained forensic integrity using hashing</li>
+      <li>Recovered deleted NTFS artefacts</li>
+      <li>Decrypted VeraCrypt volumes</li>
+      <li>Analysed images, audio, and web activity</li>
+      <li>Maintained integrity using MD5 hashing</li>
     </ul>
   </div>
 
   <div class="card">
     <h3>Advanced Digital Forensics – Operation Wapping</h3>
     <ul>
-      <li>Steganography and hidden data extraction</li>
+      <li>Steganography & hidden data extraction</li>
       <li>QR code password decoding</li>
       <li>Encrypted container analysis</li>
       <li>Attacker behaviour investigation</li>
@@ -183,8 +197,8 @@ img {
   <div class="card">
     <h3>Penetration Testing & Enumeration Lab</h3>
     <ul>
-      <li>Nmap scanning and host discovery</li>
-      <li>CVE vulnerability mapping</li>
+      <li>Nmap scanning & host discovery</li>
+      <li>CVE mapping & vulnerability analysis</li>
       <li>MITRE ATT&CK techniques</li>
       <li>Linux privilege escalation</li>
     </ul>
@@ -196,23 +210,32 @@ img {
       <li>WannaCry & Conficker malware analysis</li>
       <li>DoS attack simulation</li>
       <li>Firewall configuration</li>
-      <li>Web security testing & phishing simulation</li>
+      <li>Phishing & web security testing</li>
     </ul>
   </div>
 
   <div class="card">
     <h3>TryHackMe</h3>
     <p>Completed 80+ labs and ranked Top 4% globally.</p>
-    <img src="tryhackme.png">
+    <img src="tryhackme.png" alt="TryHackMe progress" loading="lazy">
   </div>
 
   <div class="card">
     <h3>Home Lab</h3>
     <ul>
-      <li>Windows & Linux virtual environments</li>
+      <li>Windows & Linux VMs</li>
       <li>Nmap scanning & exploitation practice</li>
       <li>Splunk log monitoring</li>
     </ul>
+  </div>
+
+  <!-- 🔥 SECURITY BONUS -->
+  <div class="card">
+    <h3>Security Mindset</h3>
+    <p>
+      This portfolio implements security best practices including Content Security Policy (CSP), 
+      clickjacking protection, and secure resource handling — reflecting a defensive cybersecurity mindset.
+    </p>
   </div>
 
 </section>
@@ -244,21 +267,33 @@ img {
 <!-- CONTACT -->
 <section id="contact" class="fade">
   <h2>Contact</h2>
-  <p>Email: natimolla276@gmail.com</p>
+  <p>Email: <a href="mailto:natimolla276@gmail.com" style="color:#38bdf8;">natimolla276@gmail.com</a></p>
 </section>
 
+<!-- 🔐 SAFE SCRIPT -->
 <script>
-const elements = document.querySelectorAll(".fade");
+"use strict";
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".fade");
+
+  if (!("IntersectionObserver" in window)) {
+    elements.forEach(el => el.classList.add("show"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  elements.forEach(function(el) {
+    observer.observe(el);
   });
 });
-
-elements.forEach(el => observer.observe(el));
 </script>
 
 </body>
