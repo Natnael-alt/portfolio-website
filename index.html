@@ -44,7 +44,7 @@ section {
 .card {
   background: #1e293b;
   padding: 20px;
-  margin: 15px 0;
+  margin: 20px 0;
   border-radius: 10px;
   transition: 0.3s;
 }
@@ -97,48 +97,125 @@ img {
 
 <div class="hero fade">
   <h1>Hi, I'm <span>Natnael</span></h1>
-  <p>Cyber Security Student | IT Support | SOC Enthusiast</p>
+  <p>Cyber Security Student | SOC Analyst Aspirant | Digital Forensics Enthusiast</p>
 </div>
 
 <section id="about" class="fade">
   <h2>About Me</h2>
   <p>
-    I am a Cyber Security student at the University of Greenwich with hands-on experience in networking, system security, and IT support. 
-    I have completed over 80 labs on TryHackMe and built a home lab environment to practice real-world attack and defence scenarios. 
-    I am particularly interested in SOC roles, threat detection, and supporting secure systems in professional environments.
+    I am a Cyber Security student at the University of Greenwich with strong practical experience in 
+    digital forensics, threat detection, and system security. I have completed 80+ TryHackMe labs 
+    and built a home lab to simulate real-world attack and defence scenarios.
+  </p>
+  <p>
+    My main interests are SOC operations, incident response, and threat detection engineering. 
+    I enjoy analysing malicious behaviour, investigating digital evidence, and building solutions 
+    that improve security visibility across systems.
   </p>
 </section>
 
 <section id="projects" class="fade">
   <h2>Projects</h2>
 
+  <!-- FYP -->
   <div class="card">
-    <h3>Final Year Project (FYP)</h3>
+    <h3>🔍 Final Year Project – Malicious Browser Extension Detection</h3>
     <p>
-      I am currently working on my final year project focused on cybersecurity. 
-      The project involves analysing system vulnerabilities and implementing security measures to reduce risk. 
-      I apply knowledge from networking, penetration testing, and system security modules to simulate real-world threats and solutions.
+      Designed and implemented a <strong>cross-layer detection system</strong> to identify malicious 
+      browser extensions by correlating browser activity with host-level system events.
     </p>
+    <ul>
+      <li>Developed a simulated malicious extension (data exfiltration, downloads, history access)</li>
+      <li>Built a Python-based detection engine</li>
+      <li>Implemented real-time monitoring and risk scoring</li>
+      <li>Successfully attributed malicious activity to specific extension IDs</li>
+    </ul>
+    <p><strong>Technologies:</strong> Python, System Monitoring, Threat Detection</p>
   </div>
 
+  <!-- Digital Forensics Case -->
   <div class="card">
-    <h3>TryHackMe Progress</h3>
+    <h3>🧪 Digital Forensics Investigation – Operation Redbridge</h3>
     <p>
-      Completed 80+ rooms covering networking, SIEM, threat intelligence, penetration testing, and system security. 
-      Achieved Top 4% ranking which demonstrates consistency and strong practical understanding.
+      Conducted a full forensic investigation of a criminal case involving encrypted data, deleted files, 
+      and hidden artefacts.
     </p>
+    <ul>
+      <li>Recovered deleted files and analysed NTFS file systems</li>
+      <li>Decrypted hidden volumes using VeraCrypt</li>
+      <li>Identified incriminating images, audio files, and web activity</li>
+      <li>Maintained forensic integrity using hashing (MD5)</li>
+      <li>Built a timeline of events supporting the investigation</li>
+    </ul>
+    <p><strong>Tools:</strong> Autopsy, FTK Imager, HxD, VeraCrypt</p>
+  </div>
 
-    <!-- ADD YOUR SCREENSHOT HERE -->
+  <!-- Steganography / Advanced DF -->
+  <div class="card">
+    <h3>🕵️ Advanced Digital Forensics – Operation Wapping</h3>
+    <p>
+      Investigated complex digital artefacts involving steganography, encryption, and hidden data techniques.
+    </p>
+    <ul>
+      <li>Extracted hidden data from images (steganography)</li>
+      <li>Analysed encrypted containers and QR-based passwords</li>
+      <li>Investigated system logs and attacker communication</li>
+      <li>Identified attacker techniques including reconnaissance and data exfiltration</li>
+    </ul>
+  </div>
+
+  <!-- Cybersecurity Logbook -->
+  <div class="card">
+    <h3>💻 Cybersecurity Practical Logbook</h3>
+    <p>
+      Completed multiple hands-on labs covering malware analysis, network security, and system exploitation.
+    </p>
+    <ul>
+      <li>Analysed WannaCry ransomware and Conficker worm</li>
+      <li>Simulated Denial-of-Service (DoS) attacks</li>
+      <li>Configured and tested firewall rules</li>
+      <li>Performed web application security testing</li>
+      <li>Conducted phishing attack simulations</li>
+    </ul>
+  </div>
+
+  <!-- Penetration Testing / Enumeration -->
+  <div class="card">
+    <h3>🌐 Penetration Testing & Enumeration Lab</h3>
+    <p>
+      Performed passive and active reconnaissance techniques to identify vulnerabilities in systems.
+    </p>
+    <ul>
+      <li>Used Nmap for host scanning and version detection</li>
+      <li>Mapped vulnerabilities using CVE databases</li>
+      <li>Applied MITRE ATT&CK framework techniques</li>
+      <li>Developed buffer overflow payloads</li>
+      <li>Performed Linux privilege escalation</li>
+    </ul>
+  </div>
+
+  <!-- TryHackMe -->
+  <div class="card">
+    <h3>📊 TryHackMe Progress</h3>
+    <p>
+      Completed 80+ rooms covering SIEM, networking, penetration testing, and threat intelligence. 
+      Achieved Top 4% ranking demonstrating strong practical skills.
+    </p>
     <img src="tryhackme.png" alt="TryHackMe Rank Screenshot">
   </div>
 
+  <!-- Home Lab -->
   <div class="card">
-    <h3>Home Lab & Security Practice</h3>
+    <h3>🖥️ Home Lab & Security Practice</h3>
     <p>
-      Built a personal lab environment using virtual machines to practice Linux and Windows security. 
-      Performed network scanning using Nmap, vulnerability testing, and basic exploitation techniques. 
-      Also practiced log analysis and monitoring using tools like Splunk.
+      Built a virtual lab environment to practice real-world cybersecurity scenarios.
     </p>
+    <ul>
+      <li>Windows & Linux virtual machines</li>
+      <li>Network scanning with Nmap</li>
+      <li>Log monitoring using Splunk</li>
+      <li>Basic exploitation and vulnerability testing</li>
+    </ul>
   </div>
 
 </section>
@@ -147,22 +224,21 @@ img {
   <h2>Skills</h2>
 
   <div class="skills">
-    <span>IT Support</span>
-    <span>Active Directory</span>
-    <span>Windows Server</span>
-    <span>Networking (TCP/IP, DNS, DHCP)</span>
+    <span>Digital Forensics</span>
+    <span>Incident Response</span>
+    <span>Threat Detection</span>
+    <span>Python</span>
     <span>Linux & Windows</span>
-    <span>Nmap Scanning</span>
-    <span>SIEM (Splunk Basics)</span>
-    <span>Cyber Threat Intelligence</span>
+    <span>Active Directory</span>
+    <span>Networking (TCP/IP, DNS, DHCP)</span>
+    <span>Nmap</span>
+    <span>SIEM (Splunk)</span>
     <span>Vulnerability Assessment</span>
-    <span>Penetration Testing Basics</span>
+    <span>Penetration Testing</span>
     <span>Firewall Configuration</span>
-    <span>Endpoint Security</span>
-    <span>Incident Response (Basic)</span>
-    <span>HTML, CSS, JavaScript</span>
-    <span>SQL Basics</span>
-    <span>Problem Solving</span>
+    <span>Malware Analysis</span>
+    <span>MITRE ATT&CK</span>
+    <span>SQL</span>
   </div>
 
 </section>
