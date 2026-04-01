@@ -26,15 +26,32 @@ nav a {
   margin-left: 20px;
 }
 
+/* HERO */
 .hero {
-  text-align: center;
   padding: 100px 20px;
 }
 
-.hero h1 span {
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 span {
   color: #38bdf8;
 }
 
+.hero-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+}
+
+/* SECTIONS */
 section {
   padding: 60px 20px;
   max-width: 900px;
@@ -69,6 +86,7 @@ img {
   margin-top: 10px;
 }
 
+/* ANIMATION */
 .fade {
   opacity: 0;
   transform: translateY(20px);
@@ -95,131 +113,111 @@ img {
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero fade">
-  <h1>Hi, I'm <span>Natnael</span></h1>
-  <p>Cyber Security Student | SOC Analyst Aspirant | Digital Forensics Enthusiast</p>
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Natnael</span></h1>
+      <p>Cyber Security Student | SOC Analyst Aspirant | Digital Forensics Enthusiast</p>
+    </div>
+
+    <div class="hero-image">
+      <!-- ADD YOUR IMAGE FILE HERE -->
+      <img src="profile.jpg" alt="Natnael Bishaw">
+    </div>
+
+  </div>
 </div>
 
+<!-- ABOUT -->
 <section id="about" class="fade">
   <h2>About Me</h2>
   <p>
-    I am a Cyber Security student at the University of Greenwich with strong practical experience in 
-    digital forensics, threat detection, and system security. I have completed 80+ TryHackMe labs 
-    and built a home lab to simulate real-world attack and defence scenarios.
+    Cyber Security student with hands-on experience in digital forensics, threat detection, and penetration testing. 
+    Completed 80+ TryHackMe labs and built a home lab to simulate real-world attack and defence scenarios.
   </p>
   <p>
-    My main interests are SOC operations, incident response, and threat detection engineering. 
-    I enjoy analysing malicious behaviour, investigating digital evidence, and building solutions 
-    that improve security visibility across systems.
+    Interested in SOC roles, incident response, and threat detection engineering. 
+    Skilled in analysing malicious behaviour and investigating digital evidence.
   </p>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="fade">
   <h2>Projects</h2>
 
-  <!-- FYP -->
   <div class="card">
-    <h3>🔍 Final Year Project – Malicious Browser Extension Detection</h3>
+    <h3>Final Year Project – Malicious Browser Extension Detection</h3>
     <p>
-      Designed and implemented a <strong>cross-layer detection system</strong> to identify malicious 
-      browser extensions by correlating browser activity with host-level system events.
+      Built a cross-layer detection system correlating browser activity with host-level events.
     </p>
     <ul>
-      <li>Developed a simulated malicious extension (data exfiltration, downloads, history access)</li>
-      <li>Built a Python-based detection engine</li>
-      <li>Implemented real-time monitoring and risk scoring</li>
-      <li>Successfully attributed malicious activity to specific extension IDs</li>
-    </ul>
-    <p><strong>Technologies:</strong> Python, System Monitoring, Threat Detection</p>
-  </div>
-
-  <!-- Digital Forensics Case -->
-  <div class="card">
-    <h3>🧪 Digital Forensics Investigation – Operation Redbridge</h3>
-    <p>
-      Conducted a full forensic investigation of a criminal case involving encrypted data, deleted files, 
-      and hidden artefacts.
-    </p>
-    <ul>
-      <li>Recovered deleted files and analysed NTFS file systems</li>
-      <li>Decrypted hidden volumes using VeraCrypt</li>
-      <li>Identified incriminating images, audio files, and web activity</li>
-      <li>Maintained forensic integrity using hashing (MD5)</li>
-      <li>Built a timeline of events supporting the investigation</li>
-    </ul>
-    <p><strong>Tools:</strong> Autopsy, FTK Imager, HxD, VeraCrypt</p>
-  </div>
-
-  <!-- Steganography / Advanced DF -->
-  <div class="card">
-    <h3>🕵️ Advanced Digital Forensics – Operation Wapping</h3>
-    <p>
-      Investigated complex digital artefacts involving steganography, encryption, and hidden data techniques.
-    </p>
-    <ul>
-      <li>Extracted hidden data from images (steganography)</li>
-      <li>Analysed encrypted containers and QR-based passwords</li>
-      <li>Investigated system logs and attacker communication</li>
-      <li>Identified attacker techniques including reconnaissance and data exfiltration</li>
+      <li>Python-based detection engine</li>
+      <li>Simulated malicious extension (data exfiltration)</li>
+      <li>Real-time monitoring and risk scoring</li>
+      <li>Attribution of malicious activity to extension IDs</li>
     </ul>
   </div>
 
-  <!-- Cybersecurity Logbook -->
   <div class="card">
-    <h3>💻 Cybersecurity Practical Logbook</h3>
-    <p>
-      Completed multiple hands-on labs covering malware analysis, network security, and system exploitation.
-    </p>
+    <h3>Digital Forensics Investigation – Operation Redbridge</h3>
     <ul>
-      <li>Analysed WannaCry ransomware and Conficker worm</li>
-      <li>Simulated Denial-of-Service (DoS) attacks</li>
-      <li>Configured and tested firewall rules</li>
-      <li>Performed web application security testing</li>
-      <li>Conducted phishing attack simulations</li>
+      <li>Recovered deleted files and analysed NTFS systems</li>
+      <li>Decrypted hidden volumes (VeraCrypt)</li>
+      <li>Identified incriminating images, audio, and web activity</li>
+      <li>Maintained forensic integrity using hashing</li>
     </ul>
   </div>
 
-  <!-- Penetration Testing / Enumeration -->
   <div class="card">
-    <h3>🌐 Penetration Testing & Enumeration Lab</h3>
-    <p>
-      Performed passive and active reconnaissance techniques to identify vulnerabilities in systems.
-    </p>
+    <h3>Advanced Digital Forensics – Operation Wapping</h3>
     <ul>
-      <li>Used Nmap for host scanning and version detection</li>
-      <li>Mapped vulnerabilities using CVE databases</li>
-      <li>Applied MITRE ATT&CK framework techniques</li>
-      <li>Developed buffer overflow payloads</li>
-      <li>Performed Linux privilege escalation</li>
+      <li>Steganography and hidden data extraction</li>
+      <li>QR code password decoding</li>
+      <li>Encrypted container analysis</li>
+      <li>Attacker behaviour investigation</li>
     </ul>
   </div>
 
-  <!-- TryHackMe -->
   <div class="card">
-    <h3>📊 TryHackMe Progress</h3>
-    <p>
-      Completed 80+ rooms covering SIEM, networking, penetration testing, and threat intelligence. 
-      Achieved Top 4% ranking demonstrating strong practical skills.
-    </p>
-    <img src="tryhackme.png" alt="TryHackMe Rank Screenshot">
+    <h3>Penetration Testing & Enumeration Lab</h3>
+    <ul>
+      <li>Nmap scanning and host discovery</li>
+      <li>CVE vulnerability mapping</li>
+      <li>MITRE ATT&CK techniques</li>
+      <li>Linux privilege escalation</li>
+    </ul>
   </div>
 
-  <!-- Home Lab -->
   <div class="card">
-    <h3>🖥️ Home Lab & Security Practice</h3>
-    <p>
-      Built a virtual lab environment to practice real-world cybersecurity scenarios.
-    </p>
+    <h3>Cybersecurity Practical Logbook</h3>
     <ul>
-      <li>Windows & Linux virtual machines</li>
-      <li>Network scanning with Nmap</li>
-      <li>Log monitoring using Splunk</li>
-      <li>Basic exploitation and vulnerability testing</li>
+      <li>WannaCry & Conficker malware analysis</li>
+      <li>DoS attack simulation</li>
+      <li>Firewall configuration</li>
+      <li>Web security testing & phishing simulation</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>TryHackMe</h3>
+    <p>Completed 80+ labs and ranked Top 4% globally.</p>
+    <img src="tryhackme.png">
+  </div>
+
+  <div class="card">
+    <h3>Home Lab</h3>
+    <ul>
+      <li>Windows & Linux virtual environments</li>
+      <li>Nmap scanning & exploitation practice</li>
+      <li>Splunk log monitoring</li>
     </ul>
   </div>
 
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="fade">
   <h2>Skills</h2>
 
@@ -230,9 +228,9 @@ img {
     <span>Python</span>
     <span>Linux & Windows</span>
     <span>Active Directory</span>
-    <span>Networking (TCP/IP, DNS, DHCP)</span>
+    <span>Networking</span>
     <span>Nmap</span>
-    <span>SIEM (Splunk)</span>
+    <span>Splunk</span>
     <span>Vulnerability Assessment</span>
     <span>Penetration Testing</span>
     <span>Firewall Configuration</span>
@@ -243,6 +241,7 @@ img {
 
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="fade">
   <h2>Contact</h2>
   <p>Email: natimolla276@gmail.com</p>
