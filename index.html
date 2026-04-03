@@ -6,172 +6,139 @@
 
 <title>Natnael Bishaw | Cyber Security Portfolio</title>
 
-<!-- 🔒 SECURITY HEADERS -->
+<!-- 🔒 SECURITY -->
 <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  img-src 'self' data:;
-  style-src 'self' 'unsafe-inline';
-  script-src 'self' 'unsafe-inline';
-  object-src 'none';
-  base-uri 'self';
-  frame-ancestors 'none';
-  form-action 'self';
+default-src 'self';
+img-src 'self' data:;
+style-src 'self' 'unsafe-inline';
+script-src 'self' 'unsafe-inline';
+object-src 'none';
+frame-ancestors 'none';
 ">
 
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="Referrer-Policy" content="no-referrer">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-
 <style>
+* {margin:0; padding:0; box-sizing:border-box;}
 
-/* GLOBAL */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  background: #020617;
   color: white;
-  line-height: 1.6;
 }
 
 /* NAV */
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: #020617;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
 }
+
+nav h2 {color:#38bdf8;}
 
 nav a {
-  color: #cbd5f5;
-  text-decoration: none;
-  margin-left: 20px;
-  transition: 0.3s;
+  margin-left:25px;
+  text-decoration:none;
+  color:#94a3b8;
 }
 
-nav a:hover {
-  color: #38bdf8;
+nav a:hover {color:#38bdf8;}
+
+.btn {
+  background:#38bdf8;
+  padding:10px 18px;
+  border-radius:20px;
+  color:black;
 }
 
 /* HERO */
 .hero {
-  padding: 100px 20px;
-}
-
-.hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px 60px;
 }
 
 .hero-text h1 {
-  font-size: 40px;
+  font-size:60px;
 }
 
-.hero-text h1 span {
-  color: #38bdf8;
+.hero-text span {
+  color:#38bdf8;
 }
 
-.hero-text p {
-  color: #94a3b8;
+.hero p {
+  margin:15px 0;
+  color:#94a3b8;
+  max-width:500px;
 }
 
-.hero-image img {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #38bdf8;
-  box-shadow: 0 0 25px rgba(56,189,248,0.3);
+.hero img {
+  width:300px;
+  border-radius:20px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding:40px 60px;
 }
 
-h2 {
-  margin-bottom: 20px;
-  color: #38bdf8;
+/* ABOUT BOX */
+.about {
+  background:#0f172a;
+  padding:25px;
+  border-radius:15px;
 }
 
 /* PROJECT GRID */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
 }
 
-/* CARD */
 .card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  background:#0f172a;
+  border-radius:15px;
+  padding:15px;
+  transition:0.3s;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform:translateY(-5px);
+  border:1px solid #38bdf8;
 }
 
 .card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-
-.card img:hover {
-  transform: scale(1.03);
+  width:100%;
+  border-radius:10px;
 }
 
 .card h3 {
-  margin-top: 10px;
+  margin-top:10px;
+}
+
+.card ul {
+  font-size:14px;
+  margin-top:10px;
+  padding-left:15px;
+  color:#cbd5f5;
 }
 
 /* SKILLS */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .skills span {
-  background: #38bdf8;
-  color: black;
-  padding: 6px 12px;
-  margin: 6px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: bold;
+  display:inline-block;
+  background:#1e293b;
+  padding:8px 12px;
+  margin:5px;
+  border-radius:20px;
+  font-size:13px;
 }
 
 /* CONTACT */
-#contact a {
-  color: #38bdf8;
-  text-decoration: none;
+.contact {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
 }
-
-/* ANIMATION */
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 1s;
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 </style>
 </head>
 
@@ -184,87 +151,132 @@ h2 {
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
+    <a class="btn" href="#">Download CV</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<div class="hero fade">
-  <div class="hero-container">
-
-    <div class="hero-text">
-      <h1>Hi, I'm <span>Natnael</span></h1>
-      <p>Cyber Security Student | SOC Analyst Aspirant | Digital Forensics Enthusiast</p>
-    </div>
-
-    <div class="hero-image">
-      <img src="profile.jpg" alt="Natnael Bishaw">
-    </div>
-
+<div class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm <br><span>Natnael Bishaw</span></h1>
+    <p>Cyber Security Student | SOC Analyst Aspirant | Digital Forensics Enthusiast</p>
+    <p>
+      I build, break, and defend systems to understand attacker behaviour 
+      and develop real-world detection and response solutions.
+    </p>
   </div>
+
+  <img src="profile.jpg">
 </div>
 
 <!-- ABOUT -->
-<section id="about" class="fade">
-  <h2>About Me</h2>
-  <p>
-    Cyber Security student specialising in threat detection, digital forensics, and penetration testing.
-    Built multiple real-world projects including a cross-layer malware detection system.
-  </p>
+<section id="about">
+  <div class="about">
+    <h2>About Me</h2>
+    <p>
+      Cyber Security student with hands-on experience in digital forensics, 
+      threat detection, penetration testing, and system monitoring.
+      Completed 80+ TryHackMe labs and built a home lab environment 
+      to simulate real-world attack and defence scenarios.
+    </p>
+  </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="fade">
+<section id="projects">
   <h2>Projects</h2>
 
-  <div class="projects-grid">
+  <div class="grid">
 
+    <!-- FYP -->
     <div class="card">
       <img src="fyp.jpg">
-      <h3>Final Year Project</h3>
-      <p>Cross-layer detection of malicious browser extensions using Python.</p>
+      <h3>Malicious Extension Detection</h3>
+      <ul>
+        <li>Built cross-layer detection system (browser + host)</li>
+        <li>Developed simulated malicious browser extension</li>
+        <li>Detected file downloads & data exfiltration</li>
+        <li>Python engine for real-time monitoring</li>
+        <li>Implemented risk scoring & threat attribution</li>
+      </ul>
     </div>
 
+    <!-- REDBRIDGE -->
     <div class="card">
-      <img src="forensics1.jpg">
+      <img src="forensics.jpg">
       <h3>Operation Redbridge</h3>
-      <p>Recovered deleted files, decrypted volumes, and analysed digital evidence.</p>
+      <ul>
+        <li>Recovered deleted NTFS files & artefacts</li>
+        <li>Decrypted VeraCrypt hidden volumes</li>
+        <li>Analysed browser history & system activity</li>
+        <li>Identified incriminating evidence</li>
+        <li>Maintained forensic integrity (hashing)</li>
+      </ul>
     </div>
 
+    <!-- WAPPING -->
     <div class="card">
-      <img src="forensics2.jpg">
+      <img src="wapping.jpg">
       <h3>Operation Wapping</h3>
-      <p>Steganography, encrypted containers, and attacker behaviour analysis.</p>
+      <ul>
+        <li>Steganography & hidden data extraction</li>
+        <li>QR code decoding for password recovery</li>
+        <li>Analysed encrypted containers</li>
+        <li>Investigated attacker behaviour</li>
+      </ul>
     </div>
 
+    <!-- PENTEST -->
     <div class="card">
       <img src="pentest.jpg">
       <h3>Penetration Testing Lab</h3>
-      <p>Nmap scanning, CVEs, MITRE ATT&CK, privilege escalation.</p>
+      <ul>
+        <li>Performed Nmap host discovery & scanning</li>
+        <li>Mapped vulnerabilities to CVEs</li>
+        <li>Applied MITRE ATT&CK techniques</li>
+        <li>Executed Linux privilege escalation</li>
+      </ul>
     </div>
 
+    <!-- LOGBOOK -->
     <div class="card">
       <img src="logbook.jpg">
       <h3>Cybersecurity Logbook</h3>
-      <p>Malware analysis, DoS simulation, firewall and phishing testing.</p>
+      <ul>
+        <li>WannaCry & Conficker malware analysis</li>
+        <li>Simulated DoS attacks</li>
+        <li>Configured firewalls</li>
+        <li>Performed phishing & web testing</li>
+      </ul>
     </div>
 
+    <!-- TRYHACKME -->
     <div class="card">
       <img src="tryhackme.png">
       <h3>TryHackMe</h3>
-      <p>80+ labs completed | Top 4% ranking.</p>
+      <ul>
+        <li>Completed 80+ labs</li>
+        <li>Top 4% global ranking</li>
+        <li>Hands-on SIEM, pentesting & networking</li>
+      </ul>
     </div>
 
+    <!-- HOME LAB -->
     <div class="card">
       <img src="homelab.jpg">
       <h3>Home Lab</h3>
-      <p>Virtual environments, Splunk monitoring, and attack simulation.</p>
+      <ul>
+        <li>Built virtual Windows & Linux environments</li>
+        <li>Practiced exploitation & scanning</li>
+        <li>Used Splunk for log monitoring</li>
+      </ul>
     </div>
 
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="fade">
+<section id="skills">
   <h2>Skills</h2>
 
   <div class="skills">
@@ -272,43 +284,24 @@ h2 {
     <span>Incident Response</span>
     <span>Threat Detection</span>
     <span>Python</span>
-    <span>Linux & Windows</span>
+    <span>Linux</span>
+    <span>Windows</span>
     <span>Active Directory</span>
     <span>Networking</span>
     <span>Nmap</span>
     <span>Splunk</span>
+    <span>MITRE ATT&CK</span>
     <span>Vulnerability Assessment</span>
     <span>Penetration Testing</span>
-    <span>Firewall</span>
-    <span>MITRE ATT&CK</span>
+    <span>Malware Analysis</span>
   </div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="fade">
+<section id="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:natimolla276@gmail.com">natimolla276@gmail.com</a></p>
+  <p>Email: natimolla276@gmail.com</p>
 </section>
-
-<!-- SCRIPT -->
-<script>
-"use strict";
-
-document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(".fade");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-
-  elements.forEach(el => observer.observe(el));
-});
-</script>
 
 </body>
 </html>
