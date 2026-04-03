@@ -24,24 +24,36 @@
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
 <style>
+
+/* GLOBAL */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: #0f172a;
   color: white;
+  line-height: 1.6;
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
   background: #020617;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
-  color: white;
+  color: #cbd5f5;
   text-decoration: none;
   margin-left: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
 }
 
 /* HERO */
@@ -53,55 +65,99 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 60px;
   flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 40px;
 }
 
 .hero-text h1 span {
   color: #38bdf8;
 }
 
+.hero-text p {
+  color: #94a3b8;
+}
+
 .hero-image img {
-  width: 180px;
-  height: 180px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #38bdf8;
+  box-shadow: 0 0 25px rgba(56,189,248,0.3);
 }
 
 /* SECTIONS */
 section {
   padding: 60px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
+h2 {
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+/* PROJECT GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
 .card {
   background: #1e293b;
   padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skills span {
-  display: inline-block;
   background: #38bdf8;
   color: black;
-  padding: 6px 10px;
-  margin: 5px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  margin: 6px;
+  border-radius: 6px;
   font-size: 14px;
+  font-weight: bold;
 }
 
-img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
+/* CONTACT */
+#contact a {
+  color: #38bdf8;
+  text-decoration: none;
 }
 
 /* ANIMATION */
@@ -115,6 +171,7 @@ img {
   opacity: 1;
   transform: translateY(0);
 }
+
 </style>
 </head>
 
@@ -140,7 +197,7 @@ img {
     </div>
 
     <div class="hero-image">
-      <img src="profile.jpg" alt="Natnael Bishaw profile photo" loading="lazy">
+      <img src="profile.jpg" alt="Natnael Bishaw">
     </div>
 
   </div>
@@ -150,12 +207,8 @@ img {
 <section id="about" class="fade">
   <h2>About Me</h2>
   <p>
-    Cyber Security student with hands-on experience in digital forensics, threat detection, and penetration testing. 
-    Completed 80+ TryHackMe labs and built a home lab to simulate real-world attack and defence scenarios.
-  </p>
-  <p>
-    Interested in SOC roles, incident response, and threat detection engineering. 
-    Skilled in analysing malicious behaviour and investigating digital evidence.
+    Cyber Security student specialising in threat detection, digital forensics, and penetration testing.
+    Built multiple real-world projects including a cross-layer malware detection system.
   </p>
 </section>
 
@@ -163,81 +216,51 @@ img {
 <section id="projects" class="fade">
   <h2>Projects</h2>
 
-  <div class="card">
-    <h3>Final Year Project – Malicious Browser Extension Detection</h3>
-    <p>Cross-layer detection system correlating browser activity with host-level events.</p>
-    <ul>
-      <li>Python detection engine</li>
-      <li>Simulated malicious extension</li>
-      <li>Real-time monitoring & risk scoring</li>
-      <li>Threat attribution to extension ID</li>
-    </ul>
-  </div>
+  <div class="projects-grid">
 
-  <div class="card">
-    <h3>Digital Forensics Investigation – Operation Redbridge</h3>
-    <ul>
-      <li>Recovered deleted NTFS artefacts</li>
-      <li>Decrypted VeraCrypt volumes</li>
-      <li>Analysed images, audio, and web activity</li>
-      <li>Maintained integrity using MD5 hashing</li>
-    </ul>
-  </div>
+    <div class="card">
+      <img src="fyp.jpg">
+      <h3>Final Year Project</h3>
+      <p>Cross-layer detection of malicious browser extensions using Python.</p>
+    </div>
 
-  <div class="card">
-    <h3>Advanced Digital Forensics – Operation Wapping</h3>
-    <ul>
-      <li>Steganography & hidden data extraction</li>
-      <li>QR code password decoding</li>
-      <li>Encrypted container analysis</li>
-      <li>Attacker behaviour investigation</li>
-    </ul>
-  </div>
+    <div class="card">
+      <img src="forensics1.jpg">
+      <h3>Operation Redbridge</h3>
+      <p>Recovered deleted files, decrypted volumes, and analysed digital evidence.</p>
+    </div>
 
-  <div class="card">
-    <h3>Penetration Testing & Enumeration Lab</h3>
-    <ul>
-      <li>Nmap scanning & host discovery</li>
-      <li>CVE mapping & vulnerability analysis</li>
-      <li>MITRE ATT&CK techniques</li>
-      <li>Linux privilege escalation</li>
-    </ul>
-  </div>
+    <div class="card">
+      <img src="forensics2.jpg">
+      <h3>Operation Wapping</h3>
+      <p>Steganography, encrypted containers, and attacker behaviour analysis.</p>
+    </div>
 
-  <div class="card">
-    <h3>Cybersecurity Practical Logbook</h3>
-    <ul>
-      <li>WannaCry & Conficker malware analysis</li>
-      <li>DoS attack simulation</li>
-      <li>Firewall configuration</li>
-      <li>Phishing & web security testing</li>
-    </ul>
-  </div>
+    <div class="card">
+      <img src="pentest.jpg">
+      <h3>Penetration Testing Lab</h3>
+      <p>Nmap scanning, CVEs, MITRE ATT&CK, privilege escalation.</p>
+    </div>
 
-  <div class="card">
-    <h3>TryHackMe</h3>
-    <p>Completed 80+ labs and ranked Top 4% globally.</p>
-    <img src="tryhackme.png" alt="TryHackMe progress" loading="lazy">
-  </div>
+    <div class="card">
+      <img src="logbook.jpg">
+      <h3>Cybersecurity Logbook</h3>
+      <p>Malware analysis, DoS simulation, firewall and phishing testing.</p>
+    </div>
 
-  <div class="card">
-    <h3>Home Lab</h3>
-    <ul>
-      <li>Windows & Linux VMs</li>
-      <li>Nmap scanning & exploitation practice</li>
-      <li>Splunk log monitoring</li>
-    </ul>
-  </div>
+    <div class="card">
+      <img src="tryhackme.png">
+      <h3>TryHackMe</h3>
+      <p>80+ labs completed | Top 4% ranking.</p>
+    </div>
 
-  <!-- 🔥 SECURITY BONUS -->
-  <div class="card">
-    <h3>Security Mindset</h3>
-    <p>
-      This portfolio implements security best practices including Content Security Policy (CSP), 
-      clickjacking protection, and secure resource handling — reflecting a defensive cybersecurity mindset.
-    </p>
-  </div>
+    <div class="card">
+      <img src="homelab.jpg">
+      <h3>Home Lab</h3>
+      <p>Virtual environments, Splunk monitoring, and attack simulation.</p>
+    </div>
 
+  </div>
 </section>
 
 <!-- SKILLS -->
@@ -256,10 +279,8 @@ img {
     <span>Splunk</span>
     <span>Vulnerability Assessment</span>
     <span>Penetration Testing</span>
-    <span>Firewall Configuration</span>
-    <span>Malware Analysis</span>
+    <span>Firewall</span>
     <span>MITRE ATT&CK</span>
-    <span>SQL</span>
   </div>
 
 </section>
@@ -267,32 +288,25 @@ img {
 <!-- CONTACT -->
 <section id="contact" class="fade">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:natimolla276@gmail.com" style="color:#38bdf8;">natimolla276@gmail.com</a></p>
+  <p>Email: <a href="mailto:natimolla276@gmail.com">natimolla276@gmail.com</a></p>
 </section>
 
-<!-- 🔐 SAFE SCRIPT -->
+<!-- SCRIPT -->
 <script>
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".fade");
 
-  if (!("IntersectionObserver" in window)) {
-    elements.forEach(el => el.classList.add("show"));
-    return;
-  }
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
       }
     });
   });
 
-  elements.forEach(function(el) {
-    observer.observe(el);
-  });
+  elements.forEach(el => observer.observe(el));
 });
 </script>
 
