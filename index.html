@@ -358,24 +358,16 @@ const observer = new IntersectionObserver(entries=>{
 });
 document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
 
-// TYPING
+// TYPING FIXED (NO SHIFT)
 const words=["Cyber Security Student","SOC Analyst Aspirant","IT Support Technician"];
-let i=0,j=0,current="",del=false;
+let i=0;
 
-function type(){
-current=words[i];
-document.getElementById("typing").textContent=current.substring(0,j);
-
-if(!del && j<current.length) j++;
-else if(del && j>0) j--;
-else{
-del=!del;
-if(!del) i=(i+1)%words.length;
+function typeLoop(){
+  document.getElementById("typing").textContent = words[i];
+  i = (i+1) % words.length;
+  setTimeout(typeLoop, 2000);
 }
-
-setTimeout(type,del?50:100);
-}
-type();
+typeLoop();
 </script>
 
 </body>
