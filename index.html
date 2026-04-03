@@ -59,12 +59,9 @@ nav a:hover {color:#38bdf8;}
 
 .hero-text h1 {
   font-size:60px;
-  line-height:1.1;
 }
 
-.hero-text span {
-  color:#38bdf8;
-}
+.hero-text span {color:#38bdf8;}
 
 .hero p {
   margin:15px 0;
@@ -72,7 +69,7 @@ nav a:hover {color:#38bdf8;}
   max-width:500px;
 }
 
-/* PROFILE IMAGE + GLOW */
+/* PROFILE */
 .hero img {
   width:250px;
   height:250px;
@@ -80,11 +77,6 @@ nav a:hover {color:#38bdf8;}
   border-radius:50%;
   border:3px solid #38bdf8;
   box-shadow:0 0 40px rgba(56,189,248,0.4);
-  transition:0.3s;
-}
-
-.hero img:hover {
-  transform:scale(1.05);
 }
 
 /* SECTION */
@@ -94,19 +86,18 @@ section {
   margin:auto;
 }
 
-/* ABOUT */
-.about {
+/* BOX */
+.box {
   background:rgba(15,23,42,0.7);
-  backdrop-filter:blur(10px);
   padding:25px;
   border-radius:15px;
   border:1px solid rgba(56,189,248,0.1);
 }
 
-/* PROJECT GRID */
+/* GRID */
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit, minmax(350px,1fr));
   gap:25px;
 }
 
@@ -114,15 +105,13 @@ section {
 .card {
   background:rgba(15,23,42,0.8);
   border-radius:15px;
-  padding:15px;
+  padding:20px;
   transition:0.3s;
-  border:1px solid transparent;
 }
 
 .card:hover {
   transform:translateY(-8px);
   border:1px solid #38bdf8;
-  box-shadow:0 10px 30px rgba(56,189,248,0.2);
 }
 
 .card img {
@@ -135,11 +124,10 @@ section {
   color:#38bdf8;
 }
 
-.card ul {
+.card p {
   font-size:14px;
-  margin-top:10px;
-  padding-left:15px;
   color:#cbd5f5;
+  margin-top:10px;
 }
 
 /* SKILLS */
@@ -149,8 +137,6 @@ section {
   padding:8px 12px;
   margin:5px;
   border-radius:20px;
-  font-size:13px;
-  transition:0.3s;
 }
 
 .skills span:hover {
@@ -158,7 +144,7 @@ section {
   color:black;
 }
 
-/* FADE ANIMATION */
+/* FADE */
 .fade {
   opacity:0;
   transform:translateY(20px);
@@ -178,7 +164,8 @@ section {
   <h2>NB</h2>
   <div>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#cyber">Cyber</a>
+    <a href="#support">IT Support</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </div>
@@ -190,143 +177,178 @@ section {
     <h1>Hi, I'm <br><span>Natnael Bishaw</span></h1>
     <p id="typing"></p>
     <p>
-      I build, break, and defend systems to understand attacker behaviour 
-      and develop real-world detection and response solutions.
+      I specialise in both cybersecurity and IT support, combining technical problem-solving 
+      with real-world system defence, troubleshooting, and user-focused solutions.
     </p>
   </div>
 
-  <img src="profile.jpg" alt="Natnael Bishaw">
+  <img src="profile.jpg">
 </div>
 
 <!-- ABOUT -->
 <section id="about" class="fade">
-  <div class="about">
+  <div class="box">
     <h2>About Me</h2>
     <p>
-      Cyber Security student with hands-on experience in digital forensics, 
-      threat detection, penetration testing, and system monitoring.
-      Completed 80+ TryHackMe labs and built a home lab environment 
-      to simulate real-world attack and defence scenarios.
+      Cyber Security student with strong practical experience across digital forensics, threat detection,
+      penetration testing, and IT support environments. I have completed over 80+ hands-on labs and built
+      a home lab to simulate real-world attacks and defensive monitoring.
+    </p>
+    <p>
+      Alongside technical skills, I bring strong communication, teamwork, and problem-solving abilities 
+      developed through fast-paced customer-facing roles where accuracy, efficiency, and reliability were critical.
     </p>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="fade">
-  <h2>Projects</h2>
+<!-- CYBER -->
+<section id="cyber" class="fade">
+<h2>Cyber Security & SOC Projects</h2>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <img src="fyp.jpg">
-      <h3>Malicious Extension Detection</h3>
-      <ul>
-        <li>Cross-layer detection (browser + host correlation)</li>
-        <li>Simulated malicious extension (data exfiltration)</li>
-        <li>Real-time monitoring with Python engine</li>
-        <li>Behaviour-based threat detection</li>
-        <li>Risk scoring & attribution to extension IDs</li>
-      </ul>
-    </div>
+<div class="card">
+<img src="fyp.jpg">
+<h3>Malicious Browser Extension Detection (FYP)</h3>
+<p>
+Designed and implemented a cross-layer detection system that correlates browser activity 
+with host-level events to detect malicious browser extensions. Built a simulated malicious 
+extension performing data exfiltration and suspicious downloads. Developed a Python-based 
+detection engine capable of real-time monitoring, event filtering, and risk scoring, successfully 
+attributing malicious activity to specific extension IDs.
+</p>
+</div>
 
-    <div class="card">
-      <img src="forensics1.jpg">
-      <h3>Operation Redbridge</h3>
-      <ul>
-        <li>Recovered deleted NTFS artefacts</li>
-        <li>Decrypted VeraCrypt hidden volumes</li>
-        <li>Analysed browser & system activity</li>
-        <li>Identified digital evidence</li>
-        <li>Maintained forensic integrity (MD5 hashing)</li>
-      </ul>
-    </div>
+<div class="card">
+<img src="forensics.jpg">
+<h3>Digital Forensics – Operation Redbridge</h3>
+<p>
+Conducted a full forensic investigation involving recovery of deleted NTFS artefacts, 
+analysis of browser history, and decryption of hidden VeraCrypt volumes. Identified 
+critical digital evidence including user activity, files, and media while maintaining 
+forensic integrity through hashing and structured evidence handling.
+</p>
+</div>
 
-    <div class="card">
-      <img src="forensics2.jpg">
-      <h3>Operation Wapping</h3>
-      <ul>
-        <li>Steganography & hidden data extraction</li>
-        <li>QR code password decoding</li>
-        <li>Encrypted container analysis</li>
-        <li>Attacker behaviour investigation</li>
-      </ul>
-    </div>
+<div class="card">
+<img src="wapping.jpg">
+<h3>Advanced Forensics – Operation Wapping</h3>
+<p>
+Performed advanced forensic techniques including steganography detection, QR-based password 
+recovery, and encrypted container analysis. Investigated attacker behaviour patterns and 
+reconstructed hidden data to reveal concealed evidence.
+</p>
+</div>
 
-    <div class="card">
-      <img src="pentest.jpg">
-      <h3>Penetration Testing Lab</h3>
-      <ul>
-        <li>Nmap scanning & host discovery</li>
-        <li>CVE mapping & vulnerability analysis</li>
-        <li>MITRE ATT&CK techniques</li>
-        <li>Linux privilege escalation</li>
-      </ul>
-    </div>
+<div class="card">
+<img src="pentest.jpg">
+<h3>Penetration Testing & Enumeration Lab</h3>
+<p>
+Executed network scanning using Nmap, identified vulnerabilities through CVE mapping, 
+and applied MITRE ATT&CK techniques. Conducted privilege escalation on Linux systems 
+and analysed system weaknesses in a controlled lab environment.
+</p>
+</div>
 
-    <div class="card">
-      <img src="logbook.jpg">
-      <h3>Cybersecurity Logbook</h3>
-      <ul>
-        <li>WannaCry & Conficker malware analysis</li>
-        <li>DoS attack simulation</li>
-        <li>Firewall configuration</li>
-        <li>Phishing & web security testing</li>
-      </ul>
-    </div>
+<div class="card">
+<img src="logbook.jpg">
+<h3>Cybersecurity Practical Logbook</h3>
+<p>
+Hands-on security exercises including malware analysis (WannaCry, Conficker), DoS attack 
+simulation, firewall configuration, phishing simulations, and web security testing, 
+demonstrating practical understanding of modern cyber threats.
+</p>
+</div>
 
-    <div class="card">
-      <img src="tryhackme.png">
-      <h3>TryHackMe</h3>
-      <ul>
-        <li>Completed 80+ labs</li>
-        <li>Top 4% global ranking</li>
-        <li>Hands-on SIEM & penetration testing</li>
-      </ul>
-    </div>
+<div class="card">
+<img src="tryhackme.png">
+<h3>TryHackMe</h3>
+<p>
+Completed 80+ labs covering SIEM, networking, penetration testing, and threat intelligence. 
+Achieved a Top 4% global ranking, demonstrating strong consistency and practical cybersecurity skills.
+</p>
+</div>
 
-    <div class="card">
-      <img src="homelab.jpg">
-      <h3>Home Lab</h3>
-      <ul>
-        <li>Windows & Linux virtual environments</li>
-        <li>Exploitation & scanning practice</li>
-        <li>Splunk log monitoring</li>
-      </ul>
-    </div>
+</div>
+</section>
 
-  </div>
+<!-- IT SUPPORT -->
+<section id="support" class="fade">
+<h2>IT Support & Help Desk Experience</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="homelab.jpg">
+<h3>Home Lab & System Administration</h3>
+<p>
+Built and managed virtual environments using Windows and Linux systems. Performed system 
+configuration, troubleshooting, network setup, and log monitoring using tools like Splunk. 
+Simulated real-world IT support scenarios including system failures, connectivity issues, 
+and user troubleshooting.
+</p>
+</div>
+
+<div class="card">
+<h3>Customer-Facing Technical Support Experience</h3>
+<p>
+Worked in a fast-paced environment requiring strong communication, teamwork, and problem-solving. 
+Regularly handled customer requests, resolved issues efficiently under pressure, and maintained 
+high service standards. Developed the ability to explain technical concepts clearly to non-technical users.
+</p>
+</div>
+
+</div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="fade">
-  <h2>Skills</h2>
+<h2>Skills</h2>
 
-  <div class="skills">
-    <span>Digital Forensics</span>
-    <span>Incident Response</span>
-    <span>Threat Detection</span>
-    <span>Python</span>
-    <span>Linux</span>
-    <span>Windows</span>
-    <span>Active Directory</span>
-    <span>Networking</span>
-    <span>Nmap</span>
-    <span>Splunk</span>
-    <span>MITRE ATT&CK</span>
-    <span>Vulnerability Assessment</span>
-    <span>Penetration Testing</span>
-    <span>Malware Analysis</span>
-  </div>
+<h3>Cyber Security</h3>
+<div class="skills">
+<span>Digital Forensics</span>
+<span>Threat Detection</span>
+<span>Incident Response</span>
+<span>MITRE ATT&CK</span>
+<span>Malware Analysis</span>
+<span>SIEM (Splunk)</span>
+</div>
+
+<h3>IT & Networking</h3>
+<div class="skills">
+<span>Active Directory</span>
+<span>Windows & Linux</span>
+<span>Networking (TCP/IP, DNS, DHCP)</span>
+<span>System Troubleshooting</span>
+</div>
+
+<h3>Soft Skills</h3>
+<div class="skills">
+<span>Communication</span>
+<span>Problem Solving</span>
+<span>Teamwork</span>
+<span>Adaptability</span>
+<span>Time Management</span>
+</div>
+
+<h3>Interests</h3>
+<div class="skills">
+<span>Cyber Security Research</span>
+<span>Philosophy</span>
+<span>Reading</span>
+</div>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="fade">
-  <h2>Contact</h2>
-  <p>Email: natimolla276@gmail.com</p>
+<h2>Contact</h2>
+<p>Email: natimolla276@gmail.com</p>
 </section>
 
 <script>
-// FADE IN
+// FADE
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
@@ -336,22 +358,22 @@ const observer = new IntersectionObserver(entries=>{
 });
 document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
 
-// TYPING EFFECT
-const words = ["Cyber Security Student", "SOC Analyst Aspirant", "Digital Forensics Enthusiast"];
-let i=0,j=0,current="",isDeleting=false;
+// TYPING
+const words=["Cyber Security Student","SOC Analyst Aspirant","IT Support Technician"];
+let i=0,j=0,current="",del=false;
 
 function type(){
-  current=words[i];
-  document.getElementById("typing").textContent=current.substring(0,j);
+current=words[i];
+document.getElementById("typing").textContent=current.substring(0,j);
 
-  if(!isDeleting && j<current.length){ j++; }
-  else if(isDeleting && j>0){ j--; }
-  else{
-    isDeleting=!isDeleting;
-    if(!isDeleting) i=(i+1)%words.length;
-  }
+if(!del && j<current.length) j++;
+else if(del && j>0) j--;
+else{
+del=!del;
+if(!del) i=(i+1)%words.length;
+}
 
-  setTimeout(type, isDeleting?50:100);
+setTimeout(type,del?50:100);
 }
 type();
 </script>
